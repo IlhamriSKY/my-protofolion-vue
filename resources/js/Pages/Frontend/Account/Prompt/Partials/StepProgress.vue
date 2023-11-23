@@ -1,5 +1,5 @@
 <script setup>
-"use strict";
+// "use strict";
 const props = defineProps({
   step: { default: 2 },
   maxStep: { default: 4 },

@@ -1,5 +1,5 @@
 <script setup>
-"use strict";
+// "use strict";
 import { router } from '@inertiajs/vue3'
 
 const emit = defineEmits(['update:modelValue'])
