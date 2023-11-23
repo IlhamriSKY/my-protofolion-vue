@@ -29,3 +29,4 @@ Route::get('/profile/{username}/collection',       [FRONTEND\ProfileController::
 Route::get('/profile/{username}/followers',        [FRONTEND\ProfileController::class, 'followers']);
 Route::get('/profile/{username}/followings',       [FRONTEND\ProfileController::class, 'followings']);
 
+Route::get('/downloadcv/',           [FRONTEND\HomeController::class, 'downloadcv'])->name('download.cv');

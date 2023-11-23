@@ -11,6 +11,8 @@ import Explore from "@/Pages/Frontend/Home/Partials/Explore.vue"
 import Collection from "@/Pages/Frontend/Home/Partials/Collection.vue"
 import Feature from "@/Pages/Frontend/Home/Partials/Feature.vue"
 import sharedComposable from "@/composables/sharedComposable"
+import SliderProfile from "@/Pages/Frontend/Home/Partials/Slider-Profile.vue"
+
 
 defineProps(["home","seo"])
 defineOptions({ layout: FrontendLayout })
@@ -45,6 +47,8 @@ const NEWSLETTER_API = computed(() => import.meta.env.VITE_NEWSLETTER_API_KEY)
 
   <!-- header -->
   <Header />
+  <!-- slider profile -->
+  <SliderProfile />
   <!-- slider -->
   <Slider />
   <!-- seller -->

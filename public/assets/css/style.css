@@ -3188,7 +3188,7 @@ input[type=color] {
 }
 
 .slider__title-2 {
-  font-size: 60px;
+  font-size: 40px;
   color: var(--tp-common-white);
   font-weight: 400;
   margin-bottom: 18px;

@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\Post;
-use App\Models\Option;
-use App\Models\Plan;
-use App\Models\Slider;
-use App\Traits\Seo;
 use Cache;
+use App\Traits\Seo;
+use App\Models\Plan;
+use App\Models\Post;
 use Inertia\Inertia;
+use App\Models\Option;
+use App\Models\Slider;
+use App\Models\Category;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Response;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,7 @@ class HomeController extends Controller
         }
 
         $home = get_option('home-page', true,true);
-       
+
         $theme_path = get_option('theme_path');
 
         $seo = get_option('seo_home', true);
@@ -55,7 +56,19 @@ class HomeController extends Controller
     }
 
 
-   
+    // Download CV
+    public function downloadcv(){
+        $filePath = public_path('uploads/docs/Ilham Riski Wibowo - CV.pdf');
+
+        // Check if the file exists
+        if (file_exists($filePath)) {
+            // Provide the file for download
+            return Response::download($filePath, 'Ilham Riski Wibowo - CV.pdf');
+        } else {
+            // File not found
+            return response()->json(['error' => 'File not found.'], 404);
+        }
+    }
 
 
     /**
@@ -139,7 +152,7 @@ class HomeController extends Controller
 
         $seo = json_decode($page->seo->value ?? '');
         $primary_data =  get_option('primary_data',true);
-        
+
         $meta['title'] = $seo->title ?? '';
         $meta['site_name'] = $seo->title ?? '';
         $meta['description'] = $seo->description ?? '';
@@ -147,7 +160,7 @@ class HomeController extends Controller
         $meta['preview'] = asset($primary_data->logo ?? '');
 
         $seo = $meta;
-       
+
         config()->set('seotools.metaDescription',$meta['description']);
         config()->set('seotools.keyWords',$meta['tags']);
         config()->set('seotools.site_name',$meta['title']);
