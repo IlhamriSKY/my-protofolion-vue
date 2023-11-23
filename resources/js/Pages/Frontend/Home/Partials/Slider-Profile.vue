@@ -101,10 +101,10 @@ const options = {
 
 
                                 <div class="slider__btn-2 d-sm-flex align-items-center">
-                                    <Link :href="route('about')" class="tp-btn-border header-button active mr-15 mb-15">
+                                    <Link :href="route('about')" class="tp-btn-border text-white header-button active mr-15 mb-15">
                                     {{ trans('About') }}
                                     </Link>
-                                    <Link :href="route('download.cv')" class="tp-btn-border mb-15">
+                                    <Link :href="route('download.cv')" class="tp-btn-borde mb-15">
                                     {{ trans('Download CV') }}
                                     </Link>
                                 </div>
@@ -114,7 +114,6 @@ const options = {
                         <div class="col-xxl-6 col-xl-6 col-lg-6">
                             <div class="slider__bid-item pl-70">
                                 <div class="slider__bid-item-bg"></div>
-
                                 <Tilt :parallax="true" :options="options">
                                     <Swiper @slideChange="onSwiper" style="z-index: -10" :slides-per-view="1"
                                         :space-between="10" :modules="modules" :navigation="navigationOptions" :loop="true"
