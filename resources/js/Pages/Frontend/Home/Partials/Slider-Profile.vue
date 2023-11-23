@@ -104,7 +104,7 @@ const options = {
                                     <Link :href="route('about')" class="tp-btn-border text-white header-button active mr-15 mb-15">
                                     {{ trans('About') }}
                                     </Link>
-                                    <Link :href="route('download.cv')" class="tp-btn-borde mb-15">
+                                    <Link :href="route('download.cv')" class="tp-btn-border mb-15">
                                     {{ trans('Download CV') }}
                                     </Link>
                                 </div>
