@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && vite build --ssr"
+        "build": "vite build"
     },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
@@ -35,10 +35,12 @@
         "lodash": "^4.17.21",
         "moment": "^2.29.4",
         "mosha-vue-toastify": "^1.0.23",
+        "scroll-into-view-if-needed": "^3.1.0",
         "swiper": "^9.4.1",
         "unplugin-vue-define-options": "^1.3.7",
         "vanilla-tilt-vue": "^0.1.3",
         "vue-confetti-explosion": "^1.0.2",
+        "vue-scrollto": "^2.20.0",
         "vue-server-renderer": "^2.7.15",
         "vue-splash": "^1.2.1",
         "vue-writer": "^1.2.0",

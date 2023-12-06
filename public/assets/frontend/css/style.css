@@ -72,7 +72,7 @@
 }
 
 /*---------------------------------
-  typography css start 
+  typography css start
 ---------------------------------*/
 body {
   font-family: var(--tp-ff-body);
@@ -303,7 +303,7 @@ input[type=color] {
 }
 
 /*---------------------------------
-    common classes css start 
+    common classes css start
 ---------------------------------*/
 .w-img img {
   width: 100%;
